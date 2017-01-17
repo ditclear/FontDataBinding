@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:gravity="center"
+            android:text="Hello world"
+            android:textSize="18sp"
+            android:typeface="@{@string/nutso2}"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:gravity="center"
+            android:textSize="18sp"
+            android:text="Hello world"
+            android:typeface="@{@string/notoSans_regular}"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:gravity="center"
+            android:textSize="18sp"
+            android:text="Hello world"
+            android:typeface="@{@string/notoSansui_boldItalic}"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:gravity="center"
+            android:text="Hello world"
+            android:textSize="18sp"
+            android:typeface="@{@string/icomoon}"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:gravity="center"
+            android:text="Hello world"
+            android:textSize="18sp"
+            android:typeface="@{@string/ruthie}"/>
+    </LinearLayout>
+</layout>

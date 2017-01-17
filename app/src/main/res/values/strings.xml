@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">FontDataBinding</string>
+
+    <string name="notoSans_regular">fonts/NotoSans-Regular.ttf</string>
+    <string name="notoSansui_boldItalic">fonts/NotoSansUI-BoldItalic.ttf</string>
+    <string name="icomoon">fonts/icomoon.ttf</string>
+    <string name="nutso2">fonts/Nutso2.otf</string>
+    <string name="ruthie">fonts/Ruthie.ttf</string>
+</resources>
