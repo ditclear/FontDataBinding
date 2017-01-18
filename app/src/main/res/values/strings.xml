@@ -6,4 +6,5 @@
     <string name="icomoon">fonts/icomoon.ttf</string>
     <string name="nutso2">fonts/Nutso2.otf</string>
     <string name="ruthie">fonts/Ruthie.ttf</string>
+    <string name="hello_world">Hello world</string>
 </resources>

@@ -1,7 +1,9 @@
 package com.ditclear.sample;
 
+import android.databinding.BindingAdapter;
 import android.databinding.BindingConversion;
 import android.graphics.Typeface;
+import android.widget.TextView;
 
 /**
  * 页面描述：
@@ -19,5 +21,13 @@ public class FontBinding {
             throw e;
         }
     }
+
+    @BindingAdapter("android:text")
+    public static void setText(TextView v, String s){
+        v.setTypeface(convertStringToFace(FontApp.getInstance().getString(R.string.ruthie)));
+        v.setText(s);
+    }
+
+
 
 }

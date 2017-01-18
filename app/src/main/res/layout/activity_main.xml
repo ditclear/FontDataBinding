@@ -11,20 +11,20 @@
         android:orientation="vertical"
         android:gravity="center">
 
+        <!--绑定默认字体-->
         <TextView
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:gravity="center"
-            android:text="Hello world"
-            android:textSize="18sp"
-            android:typeface="@{@string/nutso2}"/>
-
+            android:text="@{@string/hello_world}"
+            android:textSize="18sp"/>
+        <!--绑定默认字体，然后自定义字体-->
         <TextView
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:gravity="center"
             android:textSize="18sp"
-            android:text="Hello world"
+            android:text="@{@string/hello_world}"
             android:typeface="@{@string/notoSans_regular}"/>
 
         <TextView
@@ -32,14 +32,14 @@
             android:layout_height="50dp"
             android:gravity="center"
             android:textSize="18sp"
-            android:text="Hello world"
+            android:text="@string/hello_world"
             android:typeface="@{@string/notoSansui_boldItalic}"/>
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:gravity="center"
-            android:text="Hello world"
+            android:text="@string/hello_world"
             android:textSize="18sp"
             android:typeface="@{@string/icomoon}"/>
 
@@ -47,7 +47,7 @@
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:gravity="center"
-            android:text="Hello world"
+            android:text="@string/hello_world"
             android:textSize="18sp"
             android:typeface="@{@string/ruthie}"/>
     </LinearLayout>
