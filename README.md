@@ -247,8 +247,62 @@ public class FontBinding {
 
 好了，大功告成！这也算是一种新思路吧。
 
+***补充：***
+
+如果不想每次都在xml中设置字体,可以在绑定一个常用的属性时设置一个默认的字体。比如字体是需要作用在`text`上的，那么我们只需要在`setText`的时候绑定一个默认的字体就👌了，看代码
+
+```java
+  public class FontBinding {
+    ···
+    @BindingAdapter("android:text")
+    public static void setText(TextView v, String s){
+        v.setTypeface(convertStringToFace(FontApp.getInstance().getString(R.string.ruthie)));
+        v.setText(s);
+    }
+}
+
+```
+这样在绑定文本的时候就会绑定一个默认的字体，不用每次都写
+```xml
+  <?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center">
+
+        <!--绑定默认字体-->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:gravity="center"
+            android:text="@{@string/hello_world}"
+            android:textSize="18sp"/>
+        <!--绑定默认字体，然后自定义字体-->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:gravity="center"
+            android:textSize="18sp"
+            android:text="@{@string/hello_world}"
+            android:typeface="@{@string/notoSans_regular}"/>
+
+        ···
+    </LinearLayout>
+</layout>
+```
+最后，效果图：
+
+![默认字体](http://upload-images.jianshu.io/upload_images/3722695-05bf9ef656c04ce0.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/400)
+
 #### 总结
-这只是DataBinding的一个小例子，它能做的远不止如此，而且DataBinding是android自带的，不需要引入第三方库，只需要在app.build文件中开启就好了，而且学习成本极低。
+这只是DataBinding的一个小例子，它能做的远不止如此，而且DataBinding是一个support库，最低支持到Android 2.1（API Level 7+）。不需要引入第三方库，只需要在app.build文件中开启就好了，而且学习成本极低。
 再说明一个可能被大家误解的地方，DataBinding并不是要一定和MVVM结合使用，应该说是MVVM离不开DataBinding,但DataBinding是可以在其它任何框架下使用的，包括MVC、MVP等等，至少它可以取代`ButterKnife`,不用生成那么一长串@BindView的代码。
 
 想要了解DataBinding的可以看看慕课网上的视频或者看看[完全掌握Android Data Binding](http://www.jcodecraeer.com/a/anzhuokaifa/androidkaifa/2015/0603/2992.html)
